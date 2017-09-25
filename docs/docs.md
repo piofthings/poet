@@ -1,4 +1,7 @@
 ## What is Poet?
+
+** This is a fork of the [original Poet](http://github.com/jsantell/poet). Work in progress to convert it from Jade based engine to Pug -**
+
 <a href="http://github.com/jsantell/poet" title="Poet">**Poet**</a> is a blog generator in <a href="http://nodejs.org" title="node.js">node.js</a> to generate routing, render markdown/pug/whatever posts, and get a blog up and running *fast*. Poet may not make you blog-famous, and it may give you one less excuse for not having a blog, but just imagine the insane hipster cred you get for having node power your blog. *"Cool blog, is this Wordpress or something?"* your square friend asks. *"Nah dude, this is in node,"* you respond, while skateboarding off into the sunset, doing mad flips and stuff. Little do they know you just used Poet's autoroute generation to get your content in, like, seconds, up on that internet.
 
 ## Getting Started
@@ -15,7 +18,7 @@ var
   express = require('express'),
   app = express(),
   Poet = require('poet');
-  
+
 var poet = Poet(app, {
   posts: './_posts/',
   postsPerPage: 5,

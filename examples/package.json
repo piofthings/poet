@@ -1,10 +1,12 @@
 {
   "name": "PoetExamples",
-  "version": "0.0.1",
-  "engines": ["node >= 0.6.12"],
-  "private" : true,
+  "version": "0.0.2",
+  "engines": [
+    "node >= 8.5.0"
+  ],
+  "private": true,
   "dependencies": {
-    "express": "4.0.0",
-    "pug": ">= 0.27.1"
+    "express": "4.15.5",
+    "pug": "^2.0.0-rc.4"
   }
 }
