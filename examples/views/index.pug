@@ -1,9 +1,8 @@
-extends layout
-
+extends layout.pug
 block content
- - var posts = getPosts(0,5)
- - var page  = 1
- if posts
-  each post in posts
-   include includes/postSnippet
- include includes/pagination
+    - var posts = getPosts(0,5)
+    if(posts)
+        - var page  = 1;
+        each post in posts
+            include includes/postSnippet
+        include includes/pagination

@@ -1,27 +1,41 @@
 doctype html
 html
-  head
-    title= 'Poet Demo'
-    meta(charset='utf-8')
-    link(rel='stylesheet', href='/css/bootstrap.css')
-  body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          a.brand(href='/') Poet Demos
-    .wrap
-      .container
-        .row
-          .span8
-            block content
-          .span4
-            .well.sidebar-nav
-              ul.nav.nav-list
-                li.nav-header categories
-                 each cat in getCategories()
-                  li
-                    a(href=categoryURL(cat)) #{cat}
-                li.nav-header tags
-                 each tag in getTags()
-                  li
-                    a(href=tagURL(tag)) #{tag}
+    head
+        title= 'Poet Samples'
+        meta(charset='utf-8')
+        link(rel='stylesheet', href='/css/bootstrap.css')
+    body
+        .navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                .nav.navbar-nav
+                    a(href="/") Home
+
+
+        .body-content(style="padding-top:55px")
+            .container
+                .row
+                    .col-sm-8.hidden-xs
+                        block content
+                    .col-sm-4
+                        .panel.panel-default
+                            .panel-heading
+                                .panel-title Categories
+                            .panel-body
+                                .form-input
+                                    select.form-control
+                                        each cat in getCategories()
+                                            option #[a(href=categoryURL(cat)) #{cat}]
+                        .panel.panel-default
+                            .panel-heading
+                                .panel-title Tags
+                            .panel-body
+                                ul.nav.nav-list
+                                    li.nav-header
+                                    each tag in getTags()
+                                        li
+                                            a(href=tagURL(tag)) #{tag}

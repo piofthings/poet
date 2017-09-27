@@ -5,7 +5,9 @@ block content
     h1
       a(href=post.url)
         = post.title
-    span.date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
+
+    span.date.h4 Published #{post.date.getMonth()+1}-#{post.date.getDate()}-#{post.date.getFullYear()}
+
     div.post.content
       != post.content
     div.tags
